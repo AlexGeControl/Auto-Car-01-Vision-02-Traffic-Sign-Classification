@@ -1,6 +1,4 @@
-#**Traffic Sign Recognition**
-
-## README
+# README
 
 ### Technical Report for Traffic Sign Classification using CNN
 
@@ -18,9 +16,9 @@ The goals of this project are the following:
 
 ---
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. Provide a basic summary of the data set.
+#### 1. Provide a basic summary of the data set.
 
 * The size of training set is **34799(67.13%)**
 * The size of the validation set is **4410(8.51%)**
@@ -28,7 +26,7 @@ The goals of this project are the following:
 * The shape of a traffic sign image is **(32, 32, 3)**
 * The number of unique classes/labels in the data set is **43**
 
-####2. Include an exploratory visualization of the dataset.
+#### 2. Include an exploratory visualization of the dataset.
 
 Here are my exploratory visualization of the data set.
 
@@ -50,11 +48,11 @@ It indicates that the three sets could be directly used for network building and
 
 ---
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
 ---
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique.
+#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique.
 
 My whole pre-processing procedure goes as follows:
 
@@ -129,7 +127,7 @@ Since the network show no signs of overfitting, this indicates the network suffe
 
 Here only translation and scaling transforms are used. I think they are the only reasonable transforms to apply considering the scene in which the data is generated.
 
-####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc. Consider including a diagram and/or table describing the final model.
+#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc. Consider including a diagram and/or table describing the final model.
 
 Below is the architectural view from Tensorboard. It's slight modification of LeNet-5, with increased depth for conv layer and widened fully connected layers.
 
@@ -151,7 +149,7 @@ Here is the table for detailed parameters of the network:
 | dropout      | keep prob: 0.50                                                  |
 | logits       | 512x43, activation: 'ReLU'                                       |
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 The configuration for network training is as follows:
 
@@ -175,7 +173,7 @@ learning_rate = tf.train.piecewise_constant(
 4. Checkpoint Step: 2000
 5. Max Iterations: 80000
 
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated.
+#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated.
 
 My final model results were:
 
@@ -250,11 +248,11 @@ I choose this model as my final model for traffic sign classifier.
 
 ---
 
-###Test a Model on New Images
+### Test a Model on New Images
 
 ---
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web:
 
@@ -262,7 +260,7 @@ Here are five German traffic signs that I found on the web:
 
 I think the first four images will be easy to classify while the last will be difficult since it contains two stacked traffic signs.
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set.
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set.
 
 Here are the results of the prediction:
 
@@ -280,7 +278,7 @@ Although this is not as good as its performance on test dataset(96%), I think th
 
 The pedestrians sign has triangle borders inside the training set while this one has round border.
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability.
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability.
 
 Below is the visualization of top-5 predictions of the above images
 
