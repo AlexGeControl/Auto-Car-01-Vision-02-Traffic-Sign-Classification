@@ -1,0 +1,13 @@
+{
+	"dataset_train": "data/train.p",	
+	"dataset_valid": "data/valid.p",
+	"dataset_test": "data/test.p",
+	"dataset_label_encoding": "data/signnames.csv",
+
+	"exploratory_analysis_mosaic_size": 16,
+	
+	"model_logdir": "tf-logs",
+	"model_checkpoints": "checkpoints/traffic-sign-{}.ckpt",
+	
+	"web_images_dir": "traffic_signs_from_web/*.jpg"
+}

@@ -1,0 +1,6 @@
+model_checkpoint_path: "traffic-sign-62000.ckpt"
+all_model_checkpoint_paths: "traffic-sign-54000.ckpt"
+all_model_checkpoint_paths: "traffic-sign-56000.ckpt"
+all_model_checkpoint_paths: "traffic-sign-58000.ckpt"
+all_model_checkpoint_paths: "traffic-sign-60000.ckpt"
+all_model_checkpoint_paths: "traffic-sign-62000.ckpt"
